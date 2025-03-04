@@ -1,0 +1,26 @@
+E-commerce Customer Analysis & Linear Regression Model
+Author : Ajay Surya L
+Date : 2025-03-04
+
+This Notebook (`ml.ipynb`) analyzes an e-commerce customer dataset to predict yearly spending amounts and explore relationships between customer behavior metrics. The project includes:
+
+- Data exploration and visualization
+- Statistical analysis
+- Linear regression modeling
+- Model evaluation and interpretation
+
+## Dataset --> Ecommerce Customers.csv`  
+## Features:
+- Email
+- Address
+- Avatar (color theme)
+- Avg Session Length
+- Time on App
+- Time on Website
+- Length of Membership
+- Yearly Amount Spent (target variable)
+
+## Dependencies
+- Python 3.x
+- Libraries:
+  pip install pandas numpy matplotlib seaborn scikit-learn
