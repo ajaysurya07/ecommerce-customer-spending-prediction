@@ -1,26 +1,87 @@
-E-commerce Customer Analysis & Linear Regression Model
-Author : Ajay Surya L
-Date : 2025-03-04
+ E-Commerce Customer Spend Prediction 📈🛍️
 
-This Notebook (`ml.ipynb`) analyzes an e-commerce customer dataset to predict yearly spending amounts and explore relationships between customer behavior metrics. The project includes:
+This project focuses on predicting how much money eCommerce customers are likely to spend yearly based on their usage data. It applies machine learning techniques to analyze customer behavior and estimate Yearly Amount Spent using regression models.
 
-- Data exploration and visualization
-- Statistical analysis
-- Linear regression modeling
-- Model evaluation and interpretation
 
-## Dataset --> Ecommerce Customers.csv`  
-## Features:
-- Email
-- Address
-- Avatar (color theme)
-- Avg Session Length
-- Time on App
-- Time on Website
-- Length of Membership
-- Yearly Amount Spent (target variable)
 
-## Dependencies
-- Python 3.x
+ 🔍 Problem Statement
+
+E-commerce companies often collect detailed user data such as time spent on different pages, session length, and app usage. The objective is to predict Yearly Amount Spent by each customer, which can help businesses with:
+
+- 🎯 Targeted marketing
+- 📦 Customer segmentation
+- 💰 Revenue forecasting
+
+
+
+ 📊 Dataset Overview
+
+Typical dataset fields include:
+
+- `Avg. Session Length`
+- `Time on App`
+- `Time on Website`
+- `Length of Membership`
+- `Yearly Amount Spent` (target)
+
+> Dataset is assumed to be clean and numerical, ideal for regression modeling.
+
+
+
+ 🔧 Tech Stack
+
+- Language: Python 3
 - Libraries:
-  pip install pandas numpy matplotlib seaborn scikit-learn
+  - Pandas, NumPy
+  - Matplotlib, Seaborn
+  - Scikit-learn
+
+
+
+ 🧪 Machine Learning Pipeline
+
+1. 🧹 Data Cleaning & Exploration
+   - Distribution plots, correlation matrix, pair plots
+2. 📊 Feature Selection
+   - Check for multicollinearity
+   - Identify most influential features
+3. 🧠 Model Building
+   - Linear Regression
+   - Train/Test split
+4. 🧮 Evaluation Metrics
+   - MAE, RMSE, R² Score
+5. 🔍 Residual Analysis
+   - To verify assumptions of linear regression
+
+
+
+ 🧾 Sample Code Snippet
+
+python
+from sklearn.linear_model import LinearRegression
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+predictions = model.predict(X_test)
+
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+print("R² Score:", r2_score(y_test, predictions))
+
+
+
+
+ 📈 Results Summary
+
+* ✅ High R² score achieved (typically > 0.9)
+* 🔍 Time on App & Membership length were strong predictors
+* 📉 Residuals were normally distributed — model well-fitted
+
+
+
+ 📁 Files in This Repo
+
+
+ecommerce-spend-prediction/
+├── ml.ipynb                Main notebook with model
+├── data.csv (optional)    If included
+└── README.md
